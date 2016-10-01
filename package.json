@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/kendradalley/sailing-app/issues"
   },
-  "homepage": "https://github.com/kendradalley/sailing-app#readme"
+  "homepage": "https://github.com/kendradalley/sailing-app#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "mongoose": "^4.6.2"
+  }
 }
