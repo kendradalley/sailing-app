@@ -33,3 +33,27 @@ app.use(function(err, req, res, next) {
 });
 
 // if authenticated, return a JWT token
+app.post('/api/auth', function(req, res){
+  User.findOne({email: req.body.email }, function(err, user){
+    // return 401 if error or no user
+    if(err || !user ) return res.status(401).send({message: 'User not found'});
+
+    var isAutheticated = user.authenticated(req.body.password);
+
+    if(err || !isAutheticated) return res.status(401).send({message: 'User not authenticated'});
+
+    // else sign JWT with user payload and secret, return
+    var token = jwt.sign(user.toJSON(), secret);
+
+    return res.send({user: user, token: token});
+  });
+});
+
+
+
+
+
+
+
+
+
