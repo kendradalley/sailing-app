@@ -32,7 +32,7 @@ app.use(function(err, req, res, next) {
   }
 });
 
-// if authenticated, return a JWT token
+// if authenticated, create a JWT token
 app.post('/api/auth', function(req, res){
   User.findOne({email: req.body.email }, function(err, user){
     // return 401 if error or no user
@@ -49,6 +49,11 @@ app.post('/api/auth', function(req, res){
   });
 });
 
+// Angular catchall
+app.get('/*', function(req, res){
+  res.sendFile(path.join(__dirname, 'public/index.html'));
+
+});
 
 
 
