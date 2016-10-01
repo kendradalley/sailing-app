@@ -17,8 +17,12 @@
   },
   "homepage": "https://github.com/kendradalley/sailing-app#readme",
   "dependencies": {
+    "bcrypt": "^0.8.7",
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
-    "mongoose": "^4.6.2"
+    "express-jwt": "^5.0.0",
+    "jsonwebtoken": "^7.1.9",
+    "mongoose": "^4.6.2",
+    "morgan": "^1.7.0"
   }
 }
