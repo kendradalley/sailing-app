@@ -1,0 +1,19 @@
+{
+  "name": "sailing-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kendradalley/sailing-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kendradalley/sailing-app/issues"
+  },
+  "homepage": "https://github.com/kendradalley/sailing-app#readme"
+}
