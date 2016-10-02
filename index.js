@@ -12,9 +12,9 @@ var secret = process.env.JWT_SECRET;
 var app = express();
 
 // mongoose models and connection
-var mongoose = require('mongoose');
-var User = require('./models/user');
-mongoose.connect('mongodb://localhost/sails');
+// var mongoose = require('mongoose');
+// var User = require('./models/user');
+// mongoose.connect('mongodb://localhost/sails');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -22,7 +22,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(require('morgan')('dev'));
 
 
-app.use('/api/users', expressJWT({secret: secret}).unless({method: 'POST'}), require('./controllers/users'));
+// app.use('/api/users', expressJWT({secret: secret}).unless({method: 'POST'}), require('./controllers/users'));
 
 // middleware: JWT user authorization check
 app.use(function(err, req, res, next) {
