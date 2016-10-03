@@ -9,6 +9,7 @@ router.route('/')
 
       return res.send(users);
     });
+    res.send(User.sayHello());
   })
   .post(function(req, res) {
     // find the user first in case the email already exists

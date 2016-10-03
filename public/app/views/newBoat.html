@@ -1,20 +1,47 @@
 <div class="container">
 <h1>New Boat</h1>
 
-<form ng-submit="createBoat()">
-  <div class="form-group">
-    <label for="title">Name</label>
-    <input type="text" class="form-control" id="title" ng-model="boat.title">
-  </div>
-  <div class="form-group">
-    <label for="description">Make</label>
-    <textarea class="form-control" id="description" ng-model="boat.description"></textarea>
-  </div>
-  <div class="form-group">
-    <label for="image">Image Link</label>
-    <input type="url" class="form-control" id="image" placeholder="" ng-model="boat.image">
-  </div>
+  <form ng-submit="createBoat()">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" ng-model="boat.name">
+    </div>
+    <div class="form-group">
+      <label for="make">Make</label>
+      <input type="text" class="form-control" id="make" ng-model="boat.make">
+    </div>
+    <div class="form-group">
+      <label for="make">Model</label>
+      <input type="text" class="form-control" id="model" ng-model="boat.model">
+    </div>
+    <div class="form-group">
+      <label for="year">Year</label>
+      <input type="text" class="form-control" id="year" ng-model="boat.year">
+    </div>
+    <div class="form-group">
+      <label for="image">Image Link</label>
+      <input type="url" class="form-control" id="image" placeholder="" ng-model="boat.image">
+    </div>
+    <div class="form-group">
+      <label for="engines">Engines</label>
+      <input type="text" class="form-control" id="engines" ng-model="boat.engines">
+    </div>
 
-  <button type="submit" class="btn signup">Submit</button>
-</form>
+    <div class="form-group">
+      <label for="batteries">Batteries</label>
+      <input type="text" class="form-control" id="batteries" ng-model="boat.batteries">
+    </div>
+
+    <div class="form-group">
+      <label for="generators">Generators</label>
+      <input type="text" class="form-control" id="generators" ng-model="boat.generators">
+    </div>
+
+    <div class="form-group">
+      <label for="tanks">Tanks</label>
+      <input type="text" class="form-control" id="tanks" ng-model="boat.tanks">
+    </div>
+
+    <button type="submit" class="btn signup">Save</button>
+  </form>
 </div>

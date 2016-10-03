@@ -40,4 +40,8 @@ UserSchema.pre('save', function(next) {
   }
 });
 
+UserSchema.methods.sayHello = function() {
+  return "Hi " + this.name;
+};
+
 module.exports = mongoose.model('User', UserSchema);

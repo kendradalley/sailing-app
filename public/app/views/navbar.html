@@ -6,13 +6,13 @@
   </div>
   <nav>
     <ul role="navigation" class="hidden">
-      <li><a href="#">home</a></li>
+      <li><a href="/">home</a></li>
       <li><a href="/boats">boat info</a></li>
-      <li><a href="#">trip log</a></li>
-      <li><a href="#">maintenance log</a></li>
+      <li><a href="/trips">trip log</a></li>
+      <li><a href="/maintenance">maintenance log</a></li>
       <li><a href="/fuel">fuel log</a></li>
       <li><a href="/tasks">task list</a></li>
-      <li><a href="/tasks">run report</a></li>
+      <li><a href="/reports">run report</a></li>
       <li><a href="/login" ng-hide="Auth.isLoggedIn()">Login</a></li>
       <li class="cta-button"><a href="/signup" ng-hide="Auth.isLoggedIn()">Signup</a></li>
       <li><a ng-click="logout()" ng-show="Auth.isLoggedIn()">Logout</a></li>

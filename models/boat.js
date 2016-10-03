@@ -1,8 +1,8 @@
 var mongoose = require('mongoose');
 
 var BoatSchema = new mongoose.Schema({
-  title: String,
-  description: String,
+  name: String,
+  make: String,
   model: String,
   year: Number,
   image: String,

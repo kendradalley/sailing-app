@@ -27,14 +27,20 @@ angular.module('BoatCtrls', ['BoatServices'])
 }])
 .controller('NewCtrl', ['$scope', '$location', 'Boat', function($scope, $location, Boat) {
   $scope.boat = {
-    title: '',
-    description: '',
-    image: ''
+    name: '',
+    make: '',
+    model: '',
+    year: '',
+    image: '',
+    engines: '',
+    batteries: '',
+    generators: '',
+    tanks: '',
   };
 
   $scope.createBoat = function() {
     Boat.save($scope.boat, function success(data) {
-      $location.path('/');
+      $location.path('/boats');
     }, function error(data) {
       console.log(data);
     });
@@ -54,7 +60,7 @@ angular.module('BoatCtrls', ['BoatServices'])
   };
   $scope.userSignup = function() {
     $http.post('/api/users', $scope.user).then(function success(res) {
-      $state.go('home');
+      $state.go('menu');
     }, function error(res) {
       console.log(res);
     });
@@ -68,7 +74,7 @@ angular.module('BoatCtrls', ['BoatServices'])
   $scope.userLogin = function() {
     $http.post('/api/auth', $scope.user).then(function success(res) {
       Auth.saveToken(res.data.token);
-      $state.go('home');
+      $state.go('menu');
     }, function error(res) {
       console.log(res);
     });

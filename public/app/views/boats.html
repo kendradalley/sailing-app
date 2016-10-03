@@ -1,16 +1,30 @@
-<h1>Boats</h1>
-
-<div class="container">
-<div class="form-group">
+<a href="/menu" class="back-button">&larr; Back</a>
+<div class="container all-boats">
+<div class="row">
+<!-- <div class="form-group">
   <label for="search">Search</label>
   <input type="text" class="form-control" id="search" ng-model="search">
+</div> -->
 </div>
 
-<div class="well" ng-repeat="boat in boats | filter:{title:search} track by boat._id">
-  <h1>{{boat.title}}</h1>
-  <a ng-href="/boats/{{boat._id}}">Permalink</a>
-  <a ng-click="deleteBoat(boat._id, $index)" class="btn btn-danger glyphicon glyphicon-trash pull-right"></a>
-</div>
+  <div id="pattern" class="pattern">
+    <ul class="list img-list">
+      <li ng-repeat="boat in boats | filter:{title:search} track by boat._id">
+        <a ng-href="/boats/{{boat._id}}" class="inner">
+          <div class="li-img">
+            <img class="img-responsive" ng-src="{{boat.image}}">
+          </div>
+          <div class="li-text">
+            <h4 class="li-head">{{boat.name}}</h4>
+            <p class="li-summary">{{boat.make}}</p>
+            <p class="li-summary">{{boat.model}}</p>
+            <!-- <p class="li-action">Read More</p> -->
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+<!-- NEW BOAT BUTTON -->
 <div class="user-cta">
   <div class="row">
   <div class="container-fluid">
