@@ -1,67 +1,58 @@
-// Express app requirements
 var express = require('express');
 var bodyParser = require('body-parser');
 var path = require('path');
 
-// JSON web token dependencies
+// JSON web token dependencies, including a secret key to sign the token
 var expressJWT = require('express-jwt');
 var jwt = require('jsonwebtoken');
 var secret = process.env.JWT_SECRET;
 
-// instantiate app
 var app = express();
 
 // mongoose models and connection
-// var mongoose = require('mongoose');
-// var User = require('./models/user');
-// mongoose.connect('mongodb://localhost/sails');
+var mongoose = require('mongoose');
+var User = require('./models/user');
+mongoose.connect('mongodb://localhost/sails');
 
+// decode POST data in JSON and URL encoded formats
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(require('morgan')('dev'));
 
+app.use('/api/boats', expressJWT({secret: secret}), require('./controllers/boats'));
+app.use('/api/users', expressJWT({secret: secret}).unless({method: 'POST'}), require('./controllers/users'));
 
-// app.use('/api/users', expressJWT({secret: secret}).unless({method: 'POST'}), require('./controllers/users'));
 
-// middleware: JWT user authorization check
-app.use(function(err, req, res, next) {
+// this middleware will check if expressJWT did not authorize the user, and return a message
+app.use(function (err, req, res, next) {
   if (err.name === 'UnauthorizedError') {
-    res.status(401).send({message: 'You need authorization token to view this information.'});
-
+    res.status(401).send({ message: 'You need an authorization token to view this information.' });
   }
 });
 
-// if authenticated, create a JWT token
-app.post('/api/auth', function(req, res){
-  User.findOne({email: req.body.email }, function(err, user){
+// POST /api/auth - if authenticated, return a signed JWT
+app.post('/api/auth', function(req, res) {
+  User.findOne({ email: req.body.email }, function(err, user) {
     // return 401 if error or no user
-    if(err || !user ) return res.status(401).send({message: 'User not found'});
+    if (err || !user) return res.status(401).send({ message: 'User not found' });
 
-    var isAutheticated = user.authenticated(req.body.password);
+    // attempt to authenticate a user
+    var isAuthenticated = user.authenticated(req.body.password);
+    // return 401 if invalid password or error
+    if (err || !isAuthenticated) return res.status(401).send({ message: 'User not authenticated' });
 
-    if(err || !isAutheticated) return res.status(401).send({message: 'User not authenticated'});
-
-    // else sign JWT with user payload and secret, return
+    // sign the JWT with the user payload and secret, then return
     var token = jwt.sign(user.toJSON(), secret);
 
-    return res.send({user: user, token: token});
+    return res.send({ user: user, token: token });
   });
 });
 
-// Angular catchall
-app.get('/*', function(req, res){
+app.get('/*', function(req, res) {
   res.sendFile(path.join(__dirname, 'public/index.html'));
 });
 
 var server = app.listen(process.env.PORT || 3000);
 
 module.exports = server;
-
-
-
-
-
-
-
-

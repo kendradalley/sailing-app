@@ -1,0 +1,21 @@
+<h1>Boats</h1>
+
+<div class="container">
+<div class="form-group">
+  <label for="search">Search</label>
+  <input type="text" class="form-control" id="search" ng-model="search">
+</div>
+
+<div class="well" ng-repeat="boat in boats | filter:{title:search} track by boat._id">
+  <h1>{{boat.title}}</h1>
+  <a ng-href="/boats/{{boat._id}}">Permalink</a>
+  <a ng-click="deleteBoat(boat._id, $index)" class="btn btn-danger glyphicon glyphicon-trash pull-right"></a>
+</div>
+<div class="user-cta">
+  <div class="row">
+  <div class="container-fluid">
+<a href="/boats/new" class="btn signup">New Boat</a>
+  </div>
+  </div>
+</div>
+</div>

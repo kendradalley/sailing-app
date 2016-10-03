@@ -1,17 +1,17 @@
-angular.module('SailServices', ['ngResource'])
+angular.module('BoatServices', ['ngResource'])
 .factory('Boat', ['$resource', function($resource) {
   return $resource('/api/boats/:id');
-}
+}])
 .factory('Auth', ['$window', function($window) {
   return {
     saveToken: function(token) {
-      $window.localStorage['secretboats-token'] = token;
+      $window.localStorage['secretrecipes-token'] = token;
     },
     getToken: function() {
-      return $window.localStorage['secretboats-token']
+      return $window.localStorage['secretrecipes-token'];
     },
     removeToken: function() {
-      $window.localStorage.removeItem('secretboats-token');
+      $window.localStorage.removeItem('secretrecipes-token');
     },
     isLoggedIn: function() {
       var token = this.getToken();
@@ -23,7 +23,7 @@ angular.module('SailServices', ['ngResource'])
         try {
           var payload = JSON.parse($window.atob(token.split('.')[1]));
           return payload;
-        } catch (err) {
+        } catch(err) {
           return false;
         }
       }
