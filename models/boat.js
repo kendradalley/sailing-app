@@ -6,10 +6,18 @@ var BoatSchema = new mongoose.Schema({
   model: String,
   year: Number,
   image: String,
-  engines: Number,
-  batteries: Number,
-  generators: Number,
-  tanks: Number,
+  length: Number,
+  lwl: Number,
+  beam: Number,
+  draft: Number,
+  enginemake: String,
+  enginemodel: String,
+  horsepower: Number,
+  hours: Number,
+  fuel: Number,
+  water: Number,
+  holdingtank: Number,
+
 
 });
 

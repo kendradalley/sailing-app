@@ -32,10 +32,17 @@ angular.module('BoatCtrls', ['BoatServices'])
     model: '',
     year: '',
     image: '',
-    engines: '',
-    batteries: '',
-    generators: '',
-    tanks: '',
+    length: '',
+    lwl: '',
+    beam: '',
+    draft: '',
+    enginemake: '',
+    enginemodel: '',
+    horsepower: '',
+    hours: '',
+    fuel: '',
+    water: '',
+    holdingtank: '',
   };
 
   $scope.createBoat = function() {
@@ -79,4 +86,6 @@ angular.module('BoatCtrls', ['BoatServices'])
       console.log(res);
     });
   };
-}]);
+}])
+
+.controller('')

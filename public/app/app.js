@@ -1,4 +1,4 @@
-var app = angular.module('SailsApp', ['ui.router', 'BoatCtrls']);
+var app = angular.module('SailsApp', ['ui.router', 'BoatCtrls', 'TripCtrls']);
 
 app.config([
   '$stateProvider',
@@ -47,7 +47,23 @@ app.config([
   .state('404', {
     url: '/404',
     templateUrl: 'app/views/404.html'
+  })
+  .state('trips', {
+    url: '/trips',
+    templateUrl: 'app/views/trips/trips.html',
+    controller: 'TripsCtrl'
+  })
+  .state('newTrip', {
+    url: '/trips/new',
+    templateUrl: 'app/views/trips/newTrip.html',
+    controller: 'NewTripCtrl'
+  })
+  .state('showTrip', {
+    url: '/trips/:id',
+    templateUrl: 'app/views/trips/showTrip.html',
+    controller: 'ShowTripCtrl'
   });
+
 
     $locationProvider.html5Mode(true);
   }]);

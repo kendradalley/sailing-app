@@ -1,0 +1,35 @@
+<a href="/menu" class="back-button">&larr; Back</a>
+<div class="container all-boats">
+<div class="row">
+<!-- <div class="form-group">
+  <label for="search">Search</label>
+  <input type="text" class="form-control" id="search" ng-model="search">
+</div> -->
+</div>
+
+  <div id="pattern" class="pattern">
+    <ul class="list img-list">
+      <li ng-repeat="boat in boats | filter:{title:search} track by boat._id">
+        <a ng-href="/boats/{{boat._id}}" class="inner">
+          <div class="li-img">
+            <img class="img-responsive" ng-src="{{boat.image}}">
+          </div>
+          <div class="li-text">
+            <h4 class="li-head">{{trip.name}}</h4>
+            <p class="li-summary">{{trip.make}}</p>
+            <p class="li-summary">{{trip.model}}</p>
+            <!-- <p class="li-action">Read More</p> -->
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+<!-- NEW BOAT BUTTON -->
+<div class="user-cta">
+  <div class="row">
+  <div class="container-fluid">
+<a href="/trips/new" class="btn signup">New Trip</a>
+  </div>
+  </div>
+</div>
+</div>

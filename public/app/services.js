@@ -2,6 +2,10 @@ angular.module('BoatServices', ['ngResource'])
 .factory('Boat', ['$resource', function($resource) {
   return $resource('/api/boats/:id');
 }])
+
+// .factory('Trip', ['$resource', function($resource){
+//   return $resource('/api/trips/:id');
+// }])
 .factory('Auth', ['$window', function($window) {
   return {
     saveToken: function(token) {

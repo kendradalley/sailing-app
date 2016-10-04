@@ -8,47 +8,46 @@
   </p>
   <img class="img-responsive" ng-src="{{boat.image}}">
 </div> -->
+<div class="row">
+<div class="col-md-6">
   <img class="img-responsive" ng-src="{{boat.image}}">
-
-<div id="accordion">
-  <h3>Boat Info</h3>
-  <div>
-    <ul>
-      <li>Name: {{boat.name}}</li>
+  </div>
+  <div class="col-md-6">
+      <ul>
+      <li class="boat-name">{{boat.name}}</li>
       <li>Make: {{boat.make}}</li>
       <li>Model: {{boat.model}}</li>
+      <li>Year: {{boat.year}}</li>
     </ul>
   </div>
-  <h3>Section 2</h3>
+</div>
+
+<div id="accordion">
+  <h3>Dimensions</h3>
   <div>
-    <p>
-    Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
-    purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
-    velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
-    suscipit faucibus urna.
-    </p>
+      <ul>
+      <li>Length: {{boat.length}}</li>
+      <li>LWL: {{boat.lwl}}</li>
+      <li>Beam: {{boat.beam}}</li>
+      <li>Draft: {{boat.draft}}</li>
+    </ul>
   </div>
-  <h3>Section 3</h3>
+  <h3>Engine</h3>
   <div>
     <ul>
-      <li>List item one</li>
-      <li>List item two</li>
-      <li>List item three</li>
+      <li>Make: {{boat.enginemake}}</li>
+      <li>Model: {{boat.enginemodel}}</li>
+      <li>Horsepower: {{boat.horsepower}}</li>
+      <li>Hour: {{boat.hours}}</li>
     </ul>
   </div>
-  <h3>Section 4</h3>
+  <h3>Tank Size</h3>
   <div>
-    <p>
-    Cras dictum. Pellentesque habitant morbi tristique senectus et netus
-    et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
-    faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
-    mauris vel est.
-    </p>
-    <p>
-    Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
-    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
-    inceptos himenaeos.
-    </p>
+    <ul>
+      <li>Fuel: {{boat.fuel}}</li>
+      <li>Water: {{boat.water}}</li>
+      <li>Holding Tank: {{boat.holdingtank}}</li>
+    </ul>
   </div>
 </div>
 </div>
