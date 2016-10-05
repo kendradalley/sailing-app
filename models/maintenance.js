@@ -1,9 +1,12 @@
 var mongoose = require('mongoose');
 
 var MaintenanceSchema = new mongoose.Schema({
+  boat: [{
+  type: mongoose.Schema.Types.ObjectId,
+  ref: 'Boat'
+  }],
   title: String,
   description: String,
-  // boat: reference or embed?
   vendor: String,
   category: String,
   date: Date,

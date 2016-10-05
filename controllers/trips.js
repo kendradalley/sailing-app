@@ -2,7 +2,7 @@ var express = require('express');
 var Trip = require('../models/trip');
 var router = express.Router();
 
-router.route('/trips')
+router.route('/')
   .get(function(req, res){
     Trip.find(function(err, trips){
       if(err) return res.status(500).send(err);
@@ -17,7 +17,7 @@ router.route('/trips')
     });
   });
 
-  router.route('/trips/:id')
+  router.route('/:id')
     .get(function(req, res){
       Trip.findById(req.params.id, function(err, trip){
         if(err) return res.status(500).send(err);

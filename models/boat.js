@@ -1,5 +1,6 @@
 var mongoose = require('mongoose');
 
+
 var BoatSchema = new mongoose.Schema({
   name: String,
   make: String,

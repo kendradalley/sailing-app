@@ -1,9 +1,13 @@
 var mongoose = require('mongoose');
 
 var TripSchema = new mongoose.Schema({
-  // boat: reference to boat?
-  // date: Date,
-  // time: Number, are these automatically created by mongoose
+   boat: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Boat'
+    }],
+    title: String,
+    date: Date,
+    time: Number,
     startdate: Date,
     enddate: Date,
     starttime: Number,

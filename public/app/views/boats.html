@@ -1,6 +1,7 @@
 <a href="/menu" class="back-button">&larr; Back</a>
 <div class="container all-boats">
 <div class="row">
+<h1>Boats</h1>
 <!-- <div class="form-group">
   <label for="search">Search</label>
   <input type="text" class="form-control" id="search" ng-model="search">
@@ -21,6 +22,7 @@
             <!-- <p class="li-action">Read More</p> -->
           </div>
         </a>
+          <a ng-click="deleteRecipe(recipe._id, $index)" class="btn btn-danger glyphicon glyphicon-trash pull-right"></a>
       </li>
     </ul>
   </div>

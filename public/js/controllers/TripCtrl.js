@@ -4,6 +4,7 @@ angular.module('TripCtrls', ['TripServices'])
 
   Trip.query(function success(data) {
     $scope.trips = data;
+    console.log(data);
   }, function error(data) {
     console.log(data);
   });
@@ -27,6 +28,7 @@ angular.module('TripCtrls', ['TripServices'])
 }])
 .controller('NewTripCtrl', ['$scope', '$location', 'Trip', function($scope, $location, Trip) {
   $scope.trip = {
+    title: '',
     date: '',
     time: '',
     startdate: '',
