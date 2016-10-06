@@ -1,5 +1,5 @@
-angular.module('FuelCtrls', ['FuelServices'])
-.controller('FuelsCtrl', ['$scope', 'Fuel', function($scope, Fuel) {
+angular.module('FuelCtrls', ['FuelServices', 'd3'])
+.controller('FuelsCtrl', ['$scope', 'Fuel', 'fuelGauge', function($scope, Fuel, fuelGauge) {
     $scope.fuels = [];
 
     Fuel.query(function success(data) {

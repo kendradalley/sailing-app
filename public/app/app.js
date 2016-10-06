@@ -1,4 +1,4 @@
-var app = angular.module('SailsApp', ['ui.router', 'BoatCtrls', 'TripCtrls', 'MaintenanceCtrls', 'FuelCtrls']);
+var app = angular.module('SailsApp', ['ui.router','BoatCtrls', 'TripCtrls', 'MaintenanceCtrls', 'FuelCtrls']);
 
 app.config([
   '$stateProvider',
