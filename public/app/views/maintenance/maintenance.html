@@ -1,0 +1,32 @@
+<a href="/menu" class="back-button">&larr; Back</a>
+    <h1 class="text-center">Maintenance Log</h1>
+<div class="container all-boats">
+<div class="row">
+</div>
+
+  <div id="pattern" class="pattern">
+    <ul class="list img-list">
+      <li class ="show-view" ng-repeat="maintenance in maintenances track by maintenance._id">
+        <a ng-href="/maintenance/{{maintenance._id}}" class="inner">
+          <div class="li-img">
+            <img class="img-responsive" id="main-image" src="./././img/maintenance-mini.png">
+          </div>
+          <div class="li-text">
+            <h3 class="li-head">{{maintenance.title}}</h3>
+            <h4 class="li-summary eventDate">{{maintenance.date | date:'MMM d, y'}}</h4>
+            <p class="li-action btn btn-danger glyphicon glyphicon-pencil " ng-click="editTrip(trip._id, $index)"></p>
+            <p class="li-action btn btn-danger glyphicon glyphicon-trash " ng-click="deleteMaintenance(maintenance._id, $index)"></p>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+<!-- NEW BOAT BUTTON -->
+<div class="user-cta">
+  <div class="row">
+  <div class="container-fluid">
+<a href="/maintenance/new" class="btn signup">New Maintenance Log</a>
+  </div>
+  </div>
+</div>
+</div>

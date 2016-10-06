@@ -1,0 +1,80 @@
+<div class="container">
+<h1>New Boat</h1>
+
+  <form ng-submit="createBoat()">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" ng-model="boat.name">
+    </div>
+    <div class="form-group">
+      <label for="make">Make</label>
+      <input type="text" class="form-control" id="make" ng-model="boat.make">
+    </div>
+    <div class="form-group">
+      <label for="make">Model</label>
+      <input type="text" class="form-control" id="model" ng-model="boat.model">
+    </div>
+    <div class="form-group">
+      <label for="year">Year</label>
+      <input type="text" class="form-control" id="year" ng-model="boat.year">
+    </div>
+    <div class="form-group">
+      <label for="image">Image Link</label>
+      <input type="url" class="form-control" id="image" placeholder="" ng-model="boat.image">
+    </div>
+    <legend>Dimensions</legend>
+    <div class="form-group">
+      <label for="length">Length</label>
+      <input type="text" class="form-control" id="length" ng-model="boat.length">
+    </div>
+
+    <div class="form-group">
+      <label for="lwl">LWL</label>
+      <input type="text" class="form-control" id="lwl" ng-model="boat.lwl">
+    </div>
+
+    <div class="form-group">
+      <label for="beam">Beam</label>
+      <input type="text" class="form-control" id="beam" ng-model="boat.beam">
+    </div>
+
+    <div class="form-group">
+      <label for="draft">Draft</label>
+      <input type="text" class="form-control" id="draft" ng-model="boat.draft">
+    </div>
+    <legend>Engine</legend>
+    <div class="form-group">
+      <label for="enginemake">Make</label>
+      <input type="text" class="form-control" id="enginemake" ng-model="boat.enginemake">
+    </div>
+    <div class="form-group">
+      <label for="enginemodel">Model</label>
+      <input type="text" class="form-control" id="enginemodel" ng-model="boat.enginemodel">
+    </div>
+    <div class="form-group">
+      <label for="horsepower">Horsepower</label>
+      <input type="text" class="form-control" id="horsepower" placeholder="" ng-model="boat.horsepower">
+    </div>
+    <div class="form-group">
+      <label for="hours">Hours</label>
+      <input type="text" class="form-control" id="hours" ng-model="boat.hours">
+    </div>
+
+    <div class="form-group">
+      <label for="fuel">Fuel</label>
+      <input type="text" class="form-control" id="fuel" ng-model="boat.fuel">
+    </div>
+
+    <div class="form-group">
+      <label for="water">Water</label>
+      <input type="text" class="form-control" id="water" ng-model="boat.water">
+    </div>
+
+    <div class="form-group">
+      <label for="holdingtank">Holding Tank</label>
+      <input type="text" class="form-control" id="holding tank" ng-model="boat.holdingtank">
+    </div>
+
+    <button type="submit" class="btn signup">Save</button>
+  </form>
+</div>

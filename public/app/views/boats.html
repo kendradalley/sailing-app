@@ -1,0 +1,36 @@
+<a href="/menu" class="back-button">&larr; Back</a>
+    <h1 class="text-center">Boats</h1>
+<div class="container all-boats">
+<div class="row">
+<!-- <div class="form-group">
+  <label for="search">Search</label>
+  <input type="text" class="form-control" id="search" ng-model="search">
+</div> -->
+</div>
+
+  <div id="pattern" class="pattern">
+    <ul class="list img-list">
+      <li ng-repeat="boat in boats | filter:{title:search} track by boat._id">
+        <a ng-href="/boats/{{boat._id}}" class="inner">
+          <div class="li-img">
+            <img class="img-responsive all-view" ng-src="{{boat.image}}">
+          </div>
+          <div class="li-text">
+            <h3 class="li-head">{{boat.name}}</h3>
+            <p class="li-action btn btn-danger glyphicon glyphicon-pencil " ng-click="editBoat(boat._id, $index)"></p>
+            <p class="li-action btn btn-danger glyphicon glyphicon-trash " ng-click="deleteBoat(boat._id, $index)"></p>
+          </div>
+<!--                                 <a ng-click="deleteBoat(boat._id, $index)" class="btn btn-danger glyphicon glyphicon-trash pull-right"></a> -->
+        </a>
+      </li>
+    </ul>
+  </div>
+<!-- NEW BOAT BUTTON -->
+<div class="user-cta">
+  <div class="row">
+  <div class="container-fluid">
+<a href="/boats/new" class="btn signup">New Boat</a>
+  </div>
+  </div>
+</div>
+</div>

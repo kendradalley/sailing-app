@@ -1,0 +1,31 @@
+<a href="/trips" class="back-button">&larr; Back</a>
+<div class="container boatShow">
+
+<div class="row show-view">
+<div class="col-xs-12 col-md-6">
+  <img class="img-responsive trip-image" ng-src="{{trip.image}}">
+  </div>
+  <!-- <h2 class="boat-name">{{trip.title}}</h2> -->
+  <div class="col-xs-12 col-md-6">
+      <ul>
+      <li id="boat-name">{{trip.title}}</li>
+      <li class="main-details"><i class="fa fa-ship" aria-hidden="true"></i> {{trip.departure}} - {{trip.destination}} </li>
+      <li class="main-details eventDate" id="eventDate"><i class="fa fa-calendar" aria-hidden="true"></i> {{trip.startdate | date:'MMM d, y'}} - {{trip.enddate | date:'MMM d, y'}}</li>
+     
+    </ul>
+  </div>
+</div>
+
+<div id="accordion">
+  <h3>Specs</h3>
+  <div>
+      <ul>
+      <li>Engine Hours: {{trip.enginehours}}</li>
+      <li>Speed: {{trip.speed}}</li>
+      <li>Wind Speed: {{trip.windSpeed}}</li>
+      <li>Wind Direction: {{trip.windDirection}}</li>
+    </ul>
+  </div>
+</div>
+</div>
+

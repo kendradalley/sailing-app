@@ -1,0 +1,50 @@
+<a href="/boats" class="back-button">&larr; Back</a>
+<div class="container boatShow">
+    <div class="row">
+        <div class="col-xs-12 col-md-6">
+            <img class="img-responsive" ng-src="{{boat.image}}">
+        </div>
+        <div class="col-xs-12 col-md-6">
+            <ul class="sub-head">
+                <li id="boat-name">{{boat.name}}</li>
+                <li>Make: {{boat.make}}</li>
+                <li>Model: {{boat.model}}</li>
+                <li>Year: {{boat.year}}</li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div id="accordion">
+            <h3>Dimensions</h3>
+            <div>
+                <ul class="subhead">
+                    <li>Length: {{boat.length}}</li>
+                    <li>LWL: {{boat.lwl}}</li>
+                    <li>Beam: {{boat.beam}}</li>
+                    <li>Draft: {{boat.draft}}</li>
+                </ul>
+            </div>
+        </div>
+        <div id="accordion">
+            <h3>Tank Size</h3>
+            <div>
+                <ul>
+                    <li>Fuel Capacity: {{boat.fuel}}</li>
+                    <li>Water Capacity: {{boat.water}}</li>
+                    <li>Holding Tank: {{boat.holdingtank}}</li>
+                </ul>
+            </div>
+        </div>
+        <div id="accordion">
+            <h3>Engine</h3>
+            <div>
+                <ul>
+                    <li>Make: {{boat.enginemake}}</li>
+                    <li>Model: {{boat.enginemodel}}</li>
+                    <li>Horsepower: {{boat.horsepower}}</li>
+                    <li>Hour: {{boat.hours}}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- container -->

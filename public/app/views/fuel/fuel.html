@@ -1,0 +1,38 @@
+<a href="/menu" class="back-button">&larr; Back</a>
+    <h1 class="text-center">Fuel Log</h1>
+    <svg id="fillgauge1" width="97%" height="250" onclick="gauge1.update(NewValue());"></svg></div>
+
+<div class="container all-boats">
+<div class="row">
+<!-- <svg id="fillgauge1" width="97%" height="250" onclick="gauge1.update(NewValue());"></svg>
+ -->
+ </div>
+  <div id="pattern" class="pattern">
+    <ul class="list img-list">
+      <li class ="show-view" ng-repeat="fuel in fuels track by fuel._id">
+        <a ng-href="/fuel/{{fuel._id}}" class="inner">
+          <div class="li-img">
+            <img class="img-responsive" id="main-image" src="./././img/fuel-mini.png">
+          </div>
+          <div class="li-text">
+            <h4 class="li-head eventDate">{{fuel.date | date:'MMM d, y'}} {{fuel.gallons}} gal</h4>
+            <p class="li-summary">{{fuel.type}}</p>
+            <p class="li-summary">${{fuel.cost}}</p>
+            <p class="li-summary">{{fuel.engineHours}} Hours</p>
+
+             <p class="li-action btn btn-danger glyphicon glyphicon-pencil " ng-click="editFuel(fuel._id, $index)"></p>
+            <p class="li-action btn btn-danger glyphicon glyphicon-trash " ng-click="deleteFuel(fuel._id, $index)"></p>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+<!-- NEW BOAT BUTTON -->
+<div class="user-cta">
+  <div class="row">
+  <div class="container-fluid">
+<a href="/fuel/new" class="btn signup">New Fuel Log</a>
+  </div>
+  </div>
+</div>
+</div>

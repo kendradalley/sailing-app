@@ -1,0 +1,50 @@
+<div class="container">
+<h1>New Maintenace Log</h1>
+
+  <form ng-submit="createMaintenance()">
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input type="text" class="form-control" id="title" ng-model="maintenance.title">
+    </div>
+    <div class="form-group">
+      <label for="description">Description</label>
+      <input type="text" class="form-control" id="description" ng-model="maintenance.description">
+    </div>
+    <div class="form-group">
+      <label for="vendor">Vendor</label>
+      <input type="text" class="form-control" id="vendor" placeholder="" ng-model="maintenance.vendor">
+    </div>
+    <div class="form-group">
+    <label for="category">Category</label>
+    <select class="form-control" ng-model="maintenance.category" id="category">
+      <option>Oil &#38; Filter</option>
+      <option>Fuel Filter(s)</option>
+      <option>Transmission Fluid</option>
+      <option>Engine Belts</option>
+      <option>Impeller</option>
+      <option>Zincs</option>
+      <option>Battery</option>
+      <option>Coolant</option>
+      <option>Propane</option>
+      <option>Battery</option>
+      <option>Other</option>
+    </select>
+  </div>
+
+    <div class="form-group">
+      <label for="date">Date</label>
+      <input type="date" class="form-control" id="date" ng-model="maintenance.date">
+    </div>
+      <div class="form-group">
+      <label for="cost">Cost</label>
+      <input type="textarea" class="form-control" id="cost" ng-model="maintenance.cost">
+    </div>
+
+    <div class="form-group">
+      <label for="notes">Notes</label>
+      <input type="text" class="form-control" id="notes" ng-model="maintenance.notes">
+    </div>
+
+    <button type="submit" class="btn signup">Save</button>
+  </form>
+</div>

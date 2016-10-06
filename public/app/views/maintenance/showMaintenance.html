@@ -1,0 +1,17 @@
+<a href="/maintenance" class="back-button">&larr; Back</a>
+<div class="container boatShow">
+
+<div class="row show-view">
+  <h3 class="text-center eventDate" id="head">{{maintenance.title}}</h3>
+  <div class="fuelbox">
+      <ul>
+      <li>Date: {{maintenance.date | date:'MMM d, y'}}</li>
+      <li>Description: {{maintenance.description}}</li>
+      <li>Category: {{maintenance.category}}</li>
+      <li>Vendor: {{maintenance.vendor}}</li>
+      <li>Cost: {{maintenance.cost}}</li>
+      <li>Notes: {{maintenance.notes}}</li>
+    </ul>
+  </div>
+</div>
+</div>
