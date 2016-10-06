@@ -14,6 +14,8 @@ var mongoose = require('mongoose');
 var User = require('./models/user');
 mongoose.connect('mongodb://localhost/sails');
 
+var moment = require('moment');
+
 // decode POST data in JSON and URL encoded formats
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));

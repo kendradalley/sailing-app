@@ -2,25 +2,26 @@
 <div class="container boatShow">
 
 <div class="row show-view">
-<div class="col-md-6">
-  <img class="img-responsive" ng-src="{{trip.image}}">
+<div class="col-xs-12 col-md-6">
+  <img class="img-responsive trip-image" ng-src="{{trip.image}}">
   </div>
-  <div class="col-md-6">
+  <!-- <h2 class="boat-name">{{trip.title}}</h2> -->
+  <div class="col-xs-12 col-md-6">
       <ul>
-      <li class="boat-name">{{trip.title}}</li>
-      <li>Start Date: {{trip.startdate}}</li>
-      <li>End Date: {{trip.enddate}}</li>
-      <li>Start Time: {{trip.starttime}}</li>
-      <li>End Time: {{trip.endtime}}</li>
-      <li>Departure: {{trip.departure}}</li>
-      <li>Destination: {{trip.destination}}</li>
+      <li id="boat-name">{{trip.title}}</li>
+      <li class="main-details"><i class="fa fa-ship" aria-hidden="true"></i> {{trip.departure}} - {{trip.destination}} </li>
+      <li class="main-details eventDate" id="eventDate"><i class="fa fa-calendar" aria-hidden="true"></i> {{trip.startdate}} - {{trip.enddate}}</li>
+<!--       <li class="eventDate">End Date: {{trip.enddate}}</li> -->
+<!--       <li class="eventTime">Start Time: {{trip.starttime}}</li>
+      <li class="eventTime">End Time: {{trip.endtime}}</li> -->
+<!--       <li>Destination: {{trip.destination}}</li> -->
      
     </ul>
   </div>
 </div>
 
 <div id="accordion">
-  <h3>Dimensions</h3>
+  <h3>Specs</h3>
   <div>
       <ul>
       <li>Engine Hours: {{trip.enginehours}}</li>

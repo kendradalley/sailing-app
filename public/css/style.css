@@ -131,6 +131,7 @@ nav ul {
   margin: 4em auto;
   text-align: center;
 }
+
 nav ul.hidden {
   display: none;
 }
@@ -305,14 +306,26 @@ margin-bottom: 20px;
 .boatShow {
   margin-top: 80px;
 }
-.boatShow li{
-  list-style: none;
+
+.boatShow ul {
+  /*margin-top: 50px;*/
+  padding-left: 0px;
 }
 
-.boat-name {
-  font-size: 36px;
+.boatShow li{
+  list-style: none;
+  font-size: 18px;
+}
+
+#boat-name {
+  font-size: 64px;
   font-family: 'Philosopher';
   margin-bottom: 20px;
+  color: #C2A778;
+}
+
+.main-details {
+  font-size: 20px;
 }
 .back-button {
   position: absolute;
