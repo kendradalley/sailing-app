@@ -393,7 +393,9 @@ margin-bottom: 20px;
   }
 
   .liquidFillGaugeText { 
-  font-weight: bold; }
+  font-family: 'Philosopher';
+  font-weight: bold; 
+}
 
 .eventDate {
   color: #C2A778;;
