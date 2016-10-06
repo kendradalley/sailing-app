@@ -43,6 +43,7 @@ angular.module('MaintenanceCtrls', ['MaintenanceServices'])
     }, function error(data) {
       console.log(data);
     });
+    console.log($scope.maintenance);
   };
 }]);
 

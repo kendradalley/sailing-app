@@ -10,11 +10,7 @@
       <ul>
       <li id="boat-name">{{trip.title}}</li>
       <li class="main-details"><i class="fa fa-ship" aria-hidden="true"></i> {{trip.departure}} - {{trip.destination}} </li>
-      <li class="main-details eventDate" id="eventDate"><i class="fa fa-calendar" aria-hidden="true"></i> {{trip.startdate}} - {{trip.enddate}}</li>
-<!--       <li class="eventDate">End Date: {{trip.enddate}}</li> -->
-<!--       <li class="eventTime">Start Time: {{trip.starttime}}</li>
-      <li class="eventTime">End Time: {{trip.endtime}}</li> -->
-<!--       <li>Destination: {{trip.destination}}</li> -->
+      <li class="main-details eventDate" id="eventDate"><i class="fa fa-calendar" aria-hidden="true"></i> {{trip.startdate | date:'MMM d, y'}} - {{trip.enddate | date:'MMM d, y'}}</li>
      
     </ul>
   </div>

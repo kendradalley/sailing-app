@@ -28,6 +28,7 @@ angular.module('FuelCtrls', ['FuelServices'])
 .controller('NewFuelCtrl', ['$scope', '$location', 'Fuel', function($scope, $location, Fuel) {
     $scope.fuel = {
         date: '',
+        fueltype: '',
         cost: '',
         gallons: '',
         engineHours: ''

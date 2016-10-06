@@ -13,7 +13,9 @@
           </div>
           <div class="li-text">
             <h3 class="li-head">{{maintenance.title}}</h3>
-            <h4 class="li-summary">{{maintenance.date}}</h4>
+            <h4 class="li-summary eventDate">{{maintenance.date | date:'MMM d, y'}}</h4>
+            <p class="li-action btn btn-danger glyphicon glyphicon-pencil " ng-click="editTrip(trip._id, $index)"></p>
+            <p class="li-action btn btn-danger glyphicon glyphicon-trash " ng-click="deleteMaintenance(maintenance._id, $index)"></p>
           </div>
         </a>
       </li>

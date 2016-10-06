@@ -6,6 +6,7 @@ var FuelSchema = new mongoose.Schema({
   type: mongoose.Schema.Types.ObjectId,
   ref: 'Boat'
   }],
+  fueltype: String,
   cost: Number,
   gallons: Number,
   engineHours: Number

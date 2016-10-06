@@ -2,10 +2,10 @@
 <div class="container boatShow">
 
 <div class="row show-view">
-  <h3 class="text-center eventDate" id="date">{{fuel.date}}</h3>
-  <div>
+  <h3 class="text-center eventDate" id="date">{{fuel.date | date:'MMM d, y'}}</h3>
+  <div class="fuelbox">
       <ul>
-      <li>Type: {{fuel.type}}</li>
+      <li>Type: {{fuel.fueltype}}</li>
       <li>Cost: {{fuel.cost}}</li>
       <li>Gallons Added: {{fuel.gallons}}</li>
       <li>Engine Hours: {{fuel.engineHours}}</li>

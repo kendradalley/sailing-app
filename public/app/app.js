@@ -74,7 +74,7 @@ app.config([
     controller: 'NewMaintenanceCtrl'
   })
   .state('showMaintenance', {
-    url: '/trips/:id',
+    url: '/maintenance/:id',
     templateUrl: 'app/views/maintenance/showMaintenance.html',
     controller: 'ShowMaintenanceCtrl'
   })

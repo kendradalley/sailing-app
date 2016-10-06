@@ -1,12 +1,12 @@
 <a href="/boats" class="back-button">&larr; Back</a>
-<div class="container-fluid boatShow">
+<div class="container boatShow">
     <div class="row">
         <div class="col-xs-12 col-md-6">
             <img class="img-responsive" ng-src="{{boat.image}}">
         </div>
         <div class="col-xs-12 col-md-6">
-            <ul>
-                <li class="boat-name">{{boat.name}}</li>
+            <ul class="boats">
+                <li id="boat-name">{{boat.name}}</li>
                 <li>Make: {{boat.make}}</li>
                 <li>Model: {{boat.model}}</li>
                 <li>Year: {{boat.year}}</li>
@@ -14,65 +14,37 @@
         </div>
     </div>
     <div class="row">
-        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-            <div class="panel panel-default">
-                <div class="panel-heading" role="tab" id="headingOne">
-                    <h4 class="panel-title">
-          <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-            <i class="more-less glyphicon glyphicon-plus"></i>
-            Dimensions
-          </a>
-        </h4>
-                </div>
-                <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-                    <div class="panel-body">
-                        <ul>
-                            <li>Length: {{boat.length}}</li>
-                            <li>LWL: {{boat.lwl}}</li>
-                            <li>Beam: {{boat.beam}}</li>
-                            <li>Draft: {{boat.draft}}</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="panel panel-default">
-                <div class="panel-heading" role="tab" id="headingTwo">
-                    <h4 class="panel-title">
-          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-            <i class="more-less glyphicon glyphicon-plus"></i>
-            Engine
-          </a>
-        </h4>
-                </div>
-                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                    <div class="panel-body">
-                        <ul>
-                            <li>Make: {{boat.enginemake}}</li>
-                            <li>Model: {{boat.enginemodel}}</li>
-                            <li>Horsepower: {{boat.horsepower}}</li>
-                            <li>Hour: {{boat.hours}}</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="panel panel-default">
-                <div class="panel-heading" role="tab" id="headingThree">
-                    <h4 class="panel-title">
-          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-            <i class="more-less glyphicon glyphicon-plus"></i>
-            Tank Size
-          </a>
-        </h4>
-                </div>
-                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                    <div class="panel-body">
-                        <li>Fuel: {{boat.fuel}}</li>
-                        <li>Water: {{boat.water}}</li>
-                        <li>Holding Tank: {{boat.holdingtank}}</li>
-                    </div>
-                </div>
+        <div id="accordion">
+            <h3>Dimensions</h3>
+            <div>
+                <ul class="boats">
+                    <li>Length: {{boat.length}}</li>
+                    <li>LWL: {{boat.lwl}}</li>
+                    <li>Beam: {{boat.beam}}</li>
+                    <li>Draft: {{boat.draft}}</li>
+                </ul>
             </div>
         </div>
-        <!-- panel-group -->
+        <div id="accordion">
+            <h3>Tank Size</h3>
+            <div>
+                <ul>
+                    <li>Fuel Capacity: {{boat.fuel}}</li>
+                    <li>Water Capacity: {{boat.water}}</li>
+                    <li>Holding Tank: {{boat.holdingtank}}</li>
+                </ul>
+            </div>
+        </div>
+        <div id="accordion">
+            <h3>Engine</h3>
+            <div>
+                <ul>
+                    <li>Make: {{boat.enginemake}}</li>
+                    <li>Model: {{boat.enginemodel}}</li>
+                    <li>Horsepower: {{boat.horsepower}}</li>
+                    <li>Hour: {{boat.hours}}</li>
+                </ul>
+            </div>
+        </div>
     </div>
     <!-- container -->

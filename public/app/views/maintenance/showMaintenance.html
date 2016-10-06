@@ -2,11 +2,12 @@
 <div class="container boatShow">
 
 <div class="row show-view">
-  <h3 class="text-center eventDate" id="date">{{maintenance.date}}</h3>
-  <div>
+  <h3 class="text-center eventDate" id="head">{{maintenance.title}}</h3>
+  <div class="fuelbox">
       <ul>
-      <li>title: {{maintenance.title}}</li>
+      <li>Date: {{maintenance.date | date:'MMM d, y'}}</li>
       <li>Description: {{maintenance.description}}</li>
+      <li>Category: {{maintenance.category}}</li>
       <li>Vendor: {{maintenance.vendor}}</li>
       <li>Cost: {{maintenance.cost}}</li>
       <li>Notes: {{maintenance.notes}}</li>
