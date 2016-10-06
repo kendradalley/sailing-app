@@ -2,7 +2,7 @@ var express = require('express');
 var Maintenance = require('../models/maintenance');
 var router = express.Router();
 
-router.route('/maintenance')
+router.route('/')
   .get(function(req, res){
     Maintenance.find(function(err, maintenances){
       if(err) return res.status(500).send(err);
@@ -17,7 +17,7 @@ router.route('/maintenance')
     });
   });
 
-router.route('/maintenance/:id')
+router.route('/:id')
   .get(function(req, res){
     Maintenance.findById(req.params.id, function(err, maintenance){
       if (err) return res.status(500).send(err);

@@ -1,4 +1,4 @@
-var app = angular.module('SailsApp', ['ui.router', 'BoatCtrls', 'TripCtrls']);
+var app = angular.module('SailsApp', ['ui.router', 'BoatCtrls', 'TripCtrls', 'MaintenanceCtrls', 'FuelCtrls']);
 
 app.config([
   '$stateProvider',
@@ -62,8 +62,37 @@ app.config([
     url: '/trips/:id',
     templateUrl: 'app/views/trips/showTrip.html',
     controller: 'ShowTripCtrl'
-  });
-
+  })
+    .state('maintenance', {
+    url: '/maintenance',
+    templateUrl: 'app/views/maintenance/maintenance.html',
+    controller: 'MaintenanceCtrl'
+  })
+  .state('newMaintenance', {
+    url: '/maintenance/new',
+    templateUrl: 'app/views/maintenance/newMaintenance.html',
+    controller: 'NewMaintenanceCtrl'
+  })
+  .state('showMaintenance', {
+    url: '/trips/:id',
+    templateUrl: 'app/views/maintenance/showMaintenance.html',
+    controller: 'ShowMaintenanceCtrl'
+  })
+  .state('fuel', {
+    url: '/fuel',
+    templateUrl: 'app/views/fuel/fuel.html',
+    controller: 'FuelsCtrl'
+  })
+  .state('newFuel', {
+    url: '/fuel/new',
+    templateUrl: 'app/views/fuel/newFuel.html',
+    controller: 'NewFuelCtrl'
+  })
+  .state('showFuel', {
+    url: '/fuel/:id',
+    templateUrl: 'app/views/fuel/showFuel.html',
+    controller: 'ShowFuelCtrl'
+  })
 
     $locationProvider.html5Mode(true);
   }]);

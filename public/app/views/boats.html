@@ -1,7 +1,7 @@
 <a href="/menu" class="back-button">&larr; Back</a>
+    <h1 class="text-center">Boats</h1>
 <div class="container all-boats">
 <div class="row">
-<h1>Boats</h1>
 <!-- <div class="form-group">
   <label for="search">Search</label>
   <input type="text" class="form-control" id="search" ng-model="search">
@@ -13,16 +13,15 @@
       <li ng-repeat="boat in boats | filter:{title:search} track by boat._id">
         <a ng-href="/boats/{{boat._id}}" class="inner">
           <div class="li-img">
-            <img class="img-responsive" ng-src="{{boat.image}}">
+            <img class="img-responsive all-view" ng-src="{{boat.image}}">
           </div>
           <div class="li-text">
-            <h4 class="li-head">{{boat.name}}</h4>
-            <p class="li-summary">{{boat.make}}</p>
-            <p class="li-summary">{{boat.model}}</p>
-            <!-- <p class="li-action">Read More</p> -->
+            <h3 class="li-head">{{boat.name}}</h3>
+            <p class="li-action btn btn-danger glyphicon glyphicon-pencil " ng-click="editBoat(boat._id, $index)"></p>
+            <p class="li-action btn btn-danger glyphicon glyphicon-trash " ng-click="deleteBoat(boat._id, $index)"></p>
           </div>
+<!--                                 <a ng-click="deleteBoat(boat._id, $index)" class="btn btn-danger glyphicon glyphicon-trash pull-right"></a> -->
         </a>
-          <a ng-click="deleteRecipe(recipe._id, $index)" class="btn btn-danger glyphicon glyphicon-trash pull-right"></a>
       </li>
     </ul>
   </div>

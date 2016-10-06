@@ -22,7 +22,7 @@ app.use(require('morgan')('dev'));
 
 app.use('/api/boats', expressJWT({secret: secret}), require('./controllers/boats'));
 app.use('/api/trips', expressJWT({secret: secret}), require('./controllers/trips'));
-app.use('/api/maintenances', expressJWT({secret: secret}), require('./controllers/maintenances'));
+app.use('/api/maintenance', expressJWT({secret: secret}), require('./controllers/maintenances'));
 app.use('/api/fuels', expressJWT({secret: secret}), require('./controllers/fuels'));
 app.use('/api/users', expressJWT({secret: secret}).unless({method: 'POST'}), require('./controllers/users'));
 

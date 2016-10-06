@@ -35,6 +35,7 @@ angular.module('TripCtrls', ['TripServices'])
     enddate: '',
     starttime: '',
     endtime: '',
+    image: '',
     distance: '',
     departure: '',
     destination: '',

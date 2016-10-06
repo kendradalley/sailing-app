@@ -12,6 +12,7 @@ var TripSchema = new mongoose.Schema({
     enddate: Date,
     starttime: Number,
     endtime: Number,
+    image: String,
     distance: Number,
     departure: String,
     destination: String,

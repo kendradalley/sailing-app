@@ -35,7 +35,7 @@ angular.module('FuelCtrls', ['FuelServices'])
 
     $scope.createFuel = function() {
         Fuel.save($scope.fuel, function success(data) {
-            $location.path('/fuels');
+            $location.path('/fuel');
         }, function error(data) {
             console.log(data);
         });

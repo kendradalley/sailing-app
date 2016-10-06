@@ -1,0 +1,31 @@
+<div class="container">
+<h1>New Fuel Log</h1>
+
+  <form ng-submit="createFuel()">
+    <div class="form-group">
+      <label for="date">Date</label>
+      <input type="date" class="form-control" id="date" ng-model="fuel.date">
+    </div>
+        <div class="form-group">
+    <label for="category">Type</label>
+    <select class="form-control" id="type">
+      <option>Diesel</option>
+      <option>Gas</option>
+    </select>
+  </div>
+    <div class="form-group">
+      <label for="cost">Cost</label>
+      <input type="number" class="form-control" id="cost" ng-model="fuel.cost">
+    </div>
+    <div class="form-group">
+      <label for="gallons">Gallons</label>
+      <input type="number" class="form-control" id="gallons" placeholder="" ng-model="fuel.gallons">
+    </div>
+    <div class="form-group">
+      <label for="engineHours">Engine Hours</label>
+      <input type="number" class="form-control" id="engineHours" ng-model="fuel.engineHours">
+    </div>
+
+    <button type="submit" class="btn signup">Save</button>
+  </form>
+</div>

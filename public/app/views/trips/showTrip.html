@@ -1,19 +1,19 @@
 <a href="/trips" class="back-button">&larr; Back</a>
 <div class="container boatShow">
 
-<div class="row">
+<div class="row show-view">
 <div class="col-md-6">
-  <img class="img-responsive" ng-src="{{boat.image}}">
+  <img class="img-responsive" ng-src="{{trip.image}}">
   </div>
   <div class="col-md-6">
       <ul>
       <li class="boat-name">{{trip.title}}</li>
-      <li>Year: {{trip.startdate}}</li>
-      <li>Year: {{trip.startdate}}</li>
-      <li>Year: {{trip.starttime}}</li>
-      <li>Year: {{trip.endtime}}</li>
-      <li>Year: {{trip.departure}}</li>
-      <li>Year: {{trip.destination}}</li>
+      <li>Start Date: {{trip.startdate}}</li>
+      <li>End Date: {{trip.enddate}}</li>
+      <li>Start Time: {{trip.starttime}}</li>
+      <li>End Time: {{trip.endtime}}</li>
+      <li>Departure: {{trip.departure}}</li>
+      <li>Destination: {{trip.destination}}</li>
      
     </ul>
   </div>

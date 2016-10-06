@@ -24,6 +24,15 @@ angular.module('BoatCtrls', ['BoatServices'])
   }, function error(data) {
     console.log(data);
   });
+
+    $scope.deleteBoat = function(id, boatIdx) {
+    Boat.delete({ id: id }, function success(data) {
+      $scope.boats.splice(boatIdx, 1);
+      $location.path('/boats');
+    }, function error(data) {
+      console.log(data);
+    });
+  };
 }])
 .controller('NewCtrl', ['$scope', '$location', 'Boat', function($scope, $location, Boat) {
   $scope.boat = {
@@ -88,4 +97,3 @@ angular.module('BoatCtrls', ['BoatServices'])
   };
 }])
 
-.controller('')

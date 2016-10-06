@@ -11,7 +11,9 @@ router.route('/')
   })
 
   .post(function(req, res){
+    console.log('we are in the post');
     Trip.create(req.body, function(err, trip){
+          console.log('we are in the callback');
       if (err) return res.status(500).send(err);
       return res.send(trip);
     });
